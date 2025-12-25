@@ -1,4 +1,5 @@
 import { Metadata } from "./metadata";
+import { ThemeProvider } from "../lib/theme";
 
 interface ProviderProps {
   children: React.ReactNode;
@@ -6,9 +7,9 @@ interface ProviderProps {
 
 export function Provider({ children }: ProviderProps) {
   return (
-    <>
+    <ThemeProvider>
       <Metadata />
       {children}
-    </>
+    </ThemeProvider>
   );
 }
