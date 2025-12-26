@@ -1,6 +1,6 @@
 # Website
 
-React + Vite + Hono + Tailwind + Cloudflare Workers
+React + Vite + Hono + Tailwind 
 
 ## Scripts
 - `bun run check` — Run before committing to verify types, build, and deployment config
