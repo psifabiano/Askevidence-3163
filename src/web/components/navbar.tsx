@@ -70,8 +70,11 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="font-serif text-xl font-semibold tracking-tight hover:text-accent-primary transition-colors duration-300">
-            EVIDENCE ✦
+          <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
+            <img src="/logo.png" alt="Evidence Logo" className="h-8 w-8 object-contain" />
+            <span className="font-serif text-xl font-semibold tracking-tight hover:text-accent-primary transition-colors duration-300">
+              EVIDENCE ✦
+            </span>
           </a>
 
           {/* Desktop Navigation */}

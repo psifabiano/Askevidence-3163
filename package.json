@@ -1,7 +1,7 @@
 {
   "name": "sandbox-website-template",
   "description": "A template for building a React application with Vite, Hono, and Cloudflare Workers",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@ai-sdk/openai": "^3.0.0-beta.90",
     "@radix-ui/react-slot": "^1.2.4",

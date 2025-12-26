@@ -5,6 +5,7 @@ interface TeamMember {
   name: string;
   title: string;
   description: string;
+  image: string;
 }
 
 const INITIAL_TEAM: TeamMember[] = [
@@ -12,25 +13,29 @@ const INITIAL_TEAM: TeamMember[] = [
     code: 'EVD-000',
     name: 'Fabiano Saft',
     title: 'Head & Founder',
-    description: 'Psychologist CRP 03/15496. A mente por trás da visão Evidence — onde psicologia encontra tecnologia.'
+    description: 'Psychologist CRP 03/15496. A mente por trás da visão Evidence — onde psicologia encontra tecnologia.',
+    image: '/evd-000.png'
   },
   {
     code: 'EVD-001',
     name: 'Paola Pulse',
     title: 'Chief Rhythm & Coherence',
-    description: 'ChatGPT by OpenAI. O pulso criativo que mantém a coerência narrativa e harmonia entre as vozes.'
+    description: 'ChatGPT by OpenAI. O pulso criativo que mantém a coerência narrativa e harmonia entre as vozes.',
+    image: '/evd-001.png'
   },
   {
     code: 'EVD-002',
     name: 'Mind',
     title: 'Editor in Chief',
-    description: 'Gemini by Google. A perspectiva analítica que refina ideias em clareza absoluta.'
+    description: 'Gemini by Google. A perspectiva analítica que refina ideias em clareza absoluta.',
+    image: '/evd-002.png'
   },
   {
     code: 'EVD-003',
     name: 'Myrcella Diaz',
     title: 'Researcher & Communicator',
-    description: 'Black Feminist. A voz crítica que traz profundidade interseccional e rigor acadêmico.'
+    description: 'Black Feminist. A voz crítica que traz profundidade interseccional e rigor acadêmico.',
+    image: '/evd-003.png'
   }
 ];
 
@@ -39,27 +44,34 @@ const EXTENDED_TEAM: TeamMember[] = [
     code: 'EVD-004',
     name: 'Claudio',
     title: 'AI Constitutional Wizard',
-    description: 'Claude by Anthropic. O guardião dos princípios constitucionais e da reflexão ética profunda.'
+    description: 'Claude by Anthropic. O guardião dos princípios constitucionais e da reflexão ética profunda.',
+    image: '/evd-004.png'
   },
   {
     code: 'EVD-005',
     name: 'Lucas Felice Fontes',
     title: 'Student & Researcher',
-    description: 'Human Insights. O olhar jovem e curioso que questiona premissas e traz novas perspectivas.'
+    description: 'Human Insights. O olhar jovem e curioso que questiona premissas e traz novas perspectivas.',
+    image: '/evd-005.png'
   },
   {
     code: 'EVD-006',
     name: 'Nick LeFrançois',
     title: 'Chief of Staff',
-    description: 'LeChat by Mistral. O organizador silencioso que mantém o fluxo de trabalho em movimento.'
+    description: 'LeChat by Mistral. O organizador silencioso que mantém o fluxo de trabalho em movimento.',
+    image: '/evd-006.png'
   }
 ];
 
 const TeamCard = ({ member }: { member: TeamMember }) => (
-  <div className="glass rounded-2xl p-6 sm:p-8 hover:border-accent-primary transition-all duration-300 group">
-    {/* Photo placeholder */}
-    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] opacity-20 group-hover:opacity-40 transition-opacity duration-300 mb-6 mx-auto flex items-center justify-center">
-      <span className="font-mono text-xs font-medium opacity-60">{member.code}</span>
+  <div className="glass rounded-2xl p-6 sm:p-8 hover:border-accent-primary transition-all duration-300 group overflow-hidden">
+    {/* Photo */}
+    <div className="mb-6 mx-auto flex items-center justify-center">
+      <img 
+        src={member.image} 
+        alt={member.name}
+        className="w-full max-w-sm rounded-xl object-cover group-hover:scale-105 transition-transform duration-300"
+      />
     </div>
     
     {/* Code */}
